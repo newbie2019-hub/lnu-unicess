@@ -1,0 +1,91 @@
+User
+ fname
+ mname
+ lname
+ gender
+ email
+ password
+ address
+ contact_number
+ approved_at (timestamp)
+ declined_at (timestamp)
+
+Faculty
+ id
+ faculty
+
+User_Faculty
+ user_id
+ faculty_id
+
+Role
+ admin
+ partner
+ faculty_extenionist
+ extenionist_coordinator
+
+User_Role
+ user_id
+ role_id
+
+Program
+ id
+ program
+
+Chat
+ id
+ type
+ name -> nullable (group chat has names)
+
+ChatType
+ id
+ type (group, personal)
+
+ChatParticipants
+ user_id
+ chat_id
+
+ChatMessage
+ id
+ chat_id
+ sender_id
+ message
+ attachment
+ timestamp
+
+ChatMessageSeenStatus
+ chatmessageid
+ user_id
+ seen (timestamp)
+
+ProjectProposal
+ id
+ sender_id
+ recipient_id
+ cc_id [array](other option)
+ program_id
+ project_title
+ location
+ budget_proposed
+ description
+ approved_date
+ declined_date
+
+ProjectProposalAttachments
+ projectproposal_id
+ attachment (location/directory)
+
+ProjectProposalCC
+ projectproposalid
+ user_id
+
+ProjectProposalReport
+ id
+ projectproposalid
+ type (quarter, accomplishment)
+ 
+
+
+ 
+
+
